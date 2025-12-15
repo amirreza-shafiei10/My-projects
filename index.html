@@ -1,113 +1,151 @@
 <!DOCTYPE html>
-<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluation Javascript - Amir Reza Shafiei</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Evaluation HTML-CSS "How To Become Batman"</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- my CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- HEADER -->
+    <header class="bg-warning py-3 text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-2 text-md-start mb-2 mb-md-0">
+                    <img src="img/logo.png" alt="Batman_Logo" width="200" height="50">
+                </div>
 
-    <header>
-        <h1>Evaluation Javascript</h1>
-        <p>Développement Web - Décembre 2025 - Amir Reza Shafiei - INFO DANT</p>
+                <!-- Navigation Menu -->
+                <div class="col-md-10">
+                    <nav class="nav justify-content-center justify-content-md-end">
+                        <a class="nav-link text-secondary" href="#">Accueil</a>
+                        <a class="nav-link text-secondary" href="#">Menu1</a>
+                        <a class="nav-link text-secondary" href="#">Menu2</a>
+                        <a class="nav-link text-secondary" href="#">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-        
-        <section id="exo1">
-            <h2>Exercice 1 : Année Bissextile</h2>
-            <div class="d-flex flex-wrap align-items-center gap-3">
-                <button id="btn-verifier-annee" class="btn-primary">
-                    <i class="fa-solid fa-calendar-check"></i> Saisissez une année :
-                </button>
-                <span id="resultat-annee" class="result-text"></span>
-            </div>
-        </section>
+    <!-- PHOTO SECTION -->
+    <section id="photo" class="bg-success text-center py-4">
+        <img src="img/batman.jpeg" alt="Photo" class="img-fluid">
+        <p>Always be yourself, unless you can be<b> batman</b>,<u>Always be <b>BATMAN!</b></u></p>
+    </section>
 
-        <section id="exo2">
-            <h2>Exercice 2 : Formulaire Client</h2>
-            <form id="form-client">
-                
-                <div class="form-group">
-                    <label for="civilite">Civilité :</label>
-                    <select id="civilite" name="civilite" style="max-width: 200px;">
-                        <option value="Monsieur">Monsieur</option>
-                        <option value="Madame">Madame</option>
-                    </select>
+    <!-- MAIN CONTENT -->
+    <main class="container-fluid mt-3">
+        <div class="row">
+            <!-- LEFT SIDE: Sections (Accordion) -->
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="accordion" id="sectionsAccordion">
+
+                    <!-- Section 1 -->
+                    <div class="accordion-item bg-warning mb-3">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Section 1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#sectionsAccordion">
+                            <div class="accordion-body">
+                                <h2 class="text-center mb-4">Contactez-nous</h2>
+                                <form class="mx-auto" style="max-width: 500px;">
+                                    <!-- Nom -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Votre nom</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Martin" required>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Votre e-mail</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="monadresse@gmail.com" required>
+                                    </div>
+                                    <!-- Sujet -->
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Sujet</label>
+                                        <select id="subject" class="form-select" required>
+                                            <option value="">Choisissez un sujet</option>
+                                            <option value="question">Une question</option>
+                                            <option value="probleme">Un problème</option>
+                                            <option value="autre">Autre</option>
+					</select>
+                                    </div>
+                                    <!-- Message -->
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Votre message</label>
+                                        <textarea id="message" class="form-control" rows="4"
+                                            placeholder="Bonjour, je vous contacte..." required></textarea>
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-secondary">Envoyer mon message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="accordion-item bg-warning mb-3">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Section 2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#sectionsAccordion">
+                            <div class="accordion-body">
+                                Contenu de la section 2.(img,text,etc.)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div class="accordion-item bg-warning mb-3">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Section 3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#sectionsAccordion">
+                            <div class="accordion-body">
+                                Contenu de la section 3.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="nom">Nom :</label>
-                            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="prenom">Prénom :</label>
-                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="email">Email :</label>
-                            <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="telephone">Téléphone :</label>
-                            <input type="tel" id="telephone" name="telephone" placeholder="0612345678" required>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="button" id="btn-envoyer-client" class="btn-primary mt-3">
-                    <i class="fa-solid fa-paper-plane"></i> Envoyer
-                </button>
-            </form>
-        </section>
-
-        <section id="exo3">
-            <h2>Exercice 3 : Gestion Prénoms</h2>
-            
-            <div class="input-group d-flex gap-2">
-                <input type="text" id="prenom-ls" placeholder="Saisir un prénom">
-                <button id="btn-ajouter-ls" class="btn-secondary">
-                    <i class="fa-solid fa-plus"></i> Ajouter
-                </button>
             </div>
 
-            <div class="list-container mt-4">
-                <h3>Liste des prénoms :</h3>
-                <ul id="liste-prenoms">
-                    </ul>
+            <!-- RIGHT SIDE: Zone Pub -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <div id="zone-pub" class="p-3 text-center text-white">
+                    Zone pub
+                </div>
             </div>
-
-            <button id="btn-effacer-tout" class="btn-danger">
-                <i class="fa-solid fa-trash"></i> Tout effacer
-            </button>
-        </section>
-
+        </div>
     </main>
 
-    <footer class="text-center mt-5 mb-4 text-muted" style="font-size: 0.9rem;">
-        <p>&copy; 2025 Théo Yamanoglu &bull; Étudiant Sorbonne Université</p>
+    <!-- FOOTER -->
+    <footer class="bg-secondary text-white text-center py-3 mt-3">
+       Sorbonne © 2025 - Amir Reza Shafiei - Amir_Reza.Shafiei@etu.sorbonne-universite.fr
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
